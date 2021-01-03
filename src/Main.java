@@ -12,9 +12,9 @@ public class Main {
         }
         return true;
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //        String[] str = br.readLine().split(" ");
 //        int a = Integer.parseInt(str[0]);
 //        int b = Integer.parseInt(str[1]);
@@ -88,5 +88,25 @@ public class Main {
 //                break;
 //        }
 //        System.out.println(i);
-//    }
-//}
+
+        String[] str = br.readLine().split(" ");
+        int n = Integer.parseInt(str[0]);
+        int m = Integer.parseInt(str[1]);
+        int[] num = new int[n];
+        int res = 0;
+        str = br.readLine().split(" ");
+        for (int i = 0;i<n;i++){
+            num[i] = Integer.parseInt(str[i]);
+        }
+        for (int i = 0; i < n-2; i++){
+            for (int j = i+1; j < n-1; j++){
+                for (int k = j+1; k < n ; k++){
+                    int a = num[i] + num[j] + num[k];
+                    if (a <= m && a > res)
+                        res = a;
+                }
+            }
+        }
+        System.out.println(res);
+    }
+}
