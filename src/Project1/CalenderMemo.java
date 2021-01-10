@@ -76,7 +76,6 @@ public class CalenderMemo extends JFrame{
         int year, month, date;
         public Calender(){
 
-            now = Calender.getInstance();
 
 
 

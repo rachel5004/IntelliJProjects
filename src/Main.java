@@ -89,24 +89,32 @@ public class Main {
 //        }
 //        System.out.println(i);
 
-        String[] str = br.readLine().split(" ");
-        int n = Integer.parseInt(str[0]);
-        int m = Integer.parseInt(str[1]);
-        int[] num = new int[n];
-        int res = 0;
-        str = br.readLine().split(" ");
-        for (int i = 0;i<n;i++){
-            num[i] = Integer.parseInt(str[i]);
-        }
-        for (int i = 0; i < n-2; i++){
-            for (int j = i+1; j < n-1; j++){
-                for (int k = j+1; k < n ; k++){
-                    int a = num[i] + num[j] + num[k];
-                    if (a <= m && a > res)
-                        res = a;
-                }
-            }
-        }
-        System.out.println(res);
+//        String[] str = br.readLine().split(" ");
+//        int n = Integer.parseInt(str[0]);
+//        int m = Integer.parseInt(str[1]);
+//        int[] num = new int[n];
+//        int res = 0;
+//        str = br.readLine().split(" ");
+//        for (int i = 0;i<n;i++){
+//            num[i] = Integer.parseInt(str[i]);
+//        }
+//        for (int i = 0; i < n-2; i++){
+//            for (int j = i+1; j < n-1; j++){
+//                for (int k = j+1; k < n ; k++){
+//                    int a = num[i] + num[j] + num[k];
+//                    if (a <= m && a > res)
+//                        res = a;
+//                }
+//            }
+//        }
+//        System.out.println(res);
+
+        int a,b,fst,snd,lst;
+        a = sc.nextInt();
+        b = sc.nextInt();
+        fst = a*(b%10);
+        snd = a*((b/10)%10);
+        lst = a*(b/100);
+        System.out.println(fst+"\n"+snd+"\n"+lst+"\n"+a*b);
     }
 }
