@@ -109,12 +109,29 @@ public class Main {
 //        }
 //        System.out.println(res);
 
-        int a,b,fst,snd,lst;
-        a = sc.nextInt();
-        b = sc.nextInt();
-        fst = a*(b%10);
-        snd = a*((b/10)%10);
-        lst = a*(b/100);
-        System.out.println(fst+"\n"+snd+"\n"+lst+"\n"+a*b);
+//        int a,b,fst,snd,lst;
+//        a = sc.nextInt();
+//        b = sc.nextInt();
+//        fst = a*(b%10);
+//        snd = a*((b/10)%10);
+//        lst = a*(b/100);
+//        System.out.println(fst+"\n"+snd+"\n"+lst+"\n"+a*b);
+
+//        int[] lst = new int[sc.nextInt()];
+//        for(int i = 0;i<lst.length;i++){
+//            lst[i] = sc.nextInt();
+//        }
+//        Arrays.sort(lst);
+//        for (int i:lst){
+//            System.out.println(i)
+//        }
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        for (int i = 0; i < n; i++) {
+            for (int k = 0; k <= i; k++) {
+                System.out.print("★");
+            }
+            System.out.println();
+        }
     }
 }
