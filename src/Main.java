@@ -125,13 +125,6 @@ public class Main {
 //        for (int i:lst){
 //            System.out.println(i)
 //        }
-        Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
-        for (int i = 0; i < n; i++) {
-            for (int k = 0; k <= i; k++) {
-                System.out.print("★");
-            }
-            System.out.println();
-        }
+
     }
 }
